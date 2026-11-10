@@ -1,0 +1,20 @@
+# FAKE SAMPLE DATA - synthetic training data, not real logs. All names, hosts and IPs are invented.
+timestamp,user,ip,country,city,lat,lon,tz_offset,device,result
+2026-10-25T13:24:00Z,alice,198.51.100.40,US,New York,40.71,-74.01,-4,laptop-alice,success
+2026-10-25T09:24:00Z,bob,192.0.2.91,GB,London,51.51,-0.13,0,laptop-bob,success
+2026-10-25T22:15:00Z,carol,203.0.113.88,AU,Sydney,-33.87,151.21,11,laptop-carol,success
+2026-10-25T14:49:00Z,dave,198.51.100.41,US,New York,40.71,-74.01,-4,laptop-dave,success
+2026-10-26T13:26:00Z,alice,198.51.100.40,US,New York,40.71,-74.01,-4,laptop-alice,success
+2026-10-26T09:42:00Z,bob,192.0.2.91,GB,London,51.51,-0.13,0,laptop-bob,success
+2026-10-26T22:14:00Z,carol,203.0.113.88,AU,Sydney,-33.87,151.21,11,laptop-carol,success
+2026-10-26T14:49:00Z,dave,198.51.100.41,US,New York,40.71,-74.01,-4,laptop-dave,success
+2026-10-27T13:08:00Z,alice,198.51.100.40,US,New York,40.71,-74.01,-4,laptop-alice,success
+2026-10-27T09:11:00Z,bob,192.0.2.91,GB,London,51.51,-0.13,0,laptop-bob,success
+2026-10-27T22:34:00Z,carol,203.0.113.88,AU,Sydney,-33.87,151.21,11,laptop-carol,success
+2026-10-27T14:01:00Z,dave,198.51.100.41,US,New York,40.71,-74.01,-4,laptop-dave,success
+2026-10-28T13:05:00Z,alice,198.51.100.40,US,New York,40.71,-74.01,-4,laptop-alice,success
+2026-10-28T13:25:00Z,alice,203.0.113.150,RU,Moscow,55.76,37.62,3,unknown-android,success
+2026-10-28T03:12:00Z,bob,192.0.2.91,GB,London,51.51,-0.13,0,laptop-bob,success
+2026-10-28T17:40:00Z,carol,203.0.113.89,BR,Sao Paulo,-23.55,-46.63,-3,laptop-carol,success
+2026-10-28T14:02:00Z,dave,198.51.100.41,US,New York,40.71,-74.01,-4,phone-dave,success
+2026-10-28T13:20:00Z,alice,203.0.113.150,RU,Moscow,55.76,37.62,3,unknown-android,failure

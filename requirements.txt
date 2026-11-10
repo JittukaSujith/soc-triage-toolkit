@@ -1,0 +1,10 @@
+# soc-triage-toolkit has NO third-party runtime dependencies.
+# Everything uses the Python 3.9+ standard library (argparse, re, csv, json, ipaddress, email,
+# html.parser, hashlib, urllib, unittest).
+#
+# The two GUI tools also need Tkinter, which ships with Python:
+#   * macOS: included with the python.org installer (Homebrew users: brew install python-tk)
+#   * Windows: included with the python.org installer
+#   * Debian/Ubuntu: sudo apt install python3-tk
+#
+# Nothing to install. This file exists so tools like pip and GitHub can see the project has no extra packages.

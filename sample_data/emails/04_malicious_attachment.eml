@@ -1,0 +1,41 @@
+X-Sample-Data: FAKE - synthetic training email, not a real message
+Received: from mail.invoices-delivery.example (mail.invoices-delivery.example
+ [203.0.113.99]) by mx.victim-corp.example with ESMTP; Wed, 28 Oct 2026
+ 03:40:50 +0000
+Return-Path: <ap@invoices-delivery.example>
+Authentication-Results: mx.victim-corp.example; spf=pass
+ smtp.mailfrom=invoices-delivery.example; dkim=none; dmarc=none
+ header.from=invoices-delivery.example
+From: "Accounts Payable" <ap@invoices-delivery.example>
+To: alice@victim-corp.example
+Subject: Invoice 8841 attached - payment overdue
+Date: Wed, 28 Oct 2026 03:40:55 +0000
+Message-ID: <82731@sample.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3157555377049959932=="
+
+--===============3157555377049959932==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Please see the attached invoice. Payment overdue. Details: https://bit.ly/Fak=
+eSample123
+
+--===============3157555377049959932==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Invoice_8841.pdf.exe"
+MIME-Version: 1.0
+
+RkFLRS1TQU1QTEUtRVhFQ1VUQUJMRS1DT05URU5UIC0gTk9UIFJFQUwgTUFMV0FSRSAtIERPIE5P
+VCBSVU4=
+
+--===============3157555377049959932==
+Content-Type: application/vnd.ms-word.document.macroEnabled.12
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="payroll_update.docm"
+MIME-Version: 1.0
+
+RkFLRS1TQU1QTEUtTUFDUk8tRE9DVU1FTlQgLSBOT1QgUkVBTCBNQUxXQVJF
+
+--===============3157555377049959932==--

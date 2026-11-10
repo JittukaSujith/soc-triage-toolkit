@@ -1,0 +1,8 @@
+# FAKE SAMPLE DATA - synthetic training data, not real logs. All names, hosts and IPs are invented.
+indicator,type,source,confidence,note
+203.0.113.45,ip,Sample-Internal-Blocklist,95,SSH brute-force source (fake)
+198.51.100.77,ip,Sample-Internal-Blocklist,90,Fake malware staging and C2 server
+192.0.2.64/28,ip,Sample-Scanner-List,60,Fake scanning range
+paypa1-secure.example,domain,Sample-Phish-Feed,85,Fake PayPal look-alike domain
+mail-collector.example,domain,Sample-Phish-Feed,70,Fake reply-to collection domain
+3f17c8cea5860eb699d3dd67c763adff3df97dddc9a5c47098c1e15af1fe263f,sha256,Sample-Malware-Feed,100,Fake hash of the sample 'executable' attachment

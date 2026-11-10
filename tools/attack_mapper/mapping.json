@@ -1,0 +1,244 @@
+{
+  "_notice": "Simplified teaching subset of MITRE ATT&CK (enterprise). Always confirm IDs and names at https://attack.mitre.org before quoting them in a real report.",
+  "behaviours": {
+    "brute_force": {
+      "technique_id": "T1110",
+      "name": "Brute Force",
+      "tactics": [
+        "Credential Access"
+      ],
+      "description": "Repeated password guessing against one or more accounts.",
+      "why": "Many failed logins from one source in a short time is the textbook fingerprint."
+    },
+    "password_guessing": {
+      "technique_id": "T1110.001",
+      "name": "Brute Force: Password Guessing",
+      "tactics": [
+        "Credential Access"
+      ],
+      "description": "Guessing passwords for a known account.",
+      "why": "Repeated failures against the same username."
+    },
+    "password_spray": {
+      "technique_id": "T1110.003",
+      "name": "Brute Force: Password Spraying",
+      "tactics": [
+        "Credential Access"
+      ],
+      "description": "Trying a few common passwords across many accounts.",
+      "why": "One source touching many different usernames with only a few tries each."
+    },
+    "credential_stuffing": {
+      "technique_id": "T1110.004",
+      "name": "Brute Force: Credential Stuffing",
+      "tactics": [
+        "Credential Access"
+      ],
+      "description": "Replaying username/password pairs leaked from other breaches.",
+      "why": "One account failing from many different IPs."
+    },
+    "valid_account_login": {
+      "technique_id": "T1078",
+      "name": "Valid Accounts",
+      "tactics": [
+        "Defense Evasion",
+        "Persistence",
+        "Privilege Escalation",
+        "Initial Access"
+      ],
+      "description": "Using legitimate credentials to log in.",
+      "why": "A successful login after failures, or from an unusual place, suggests stolen credentials."
+    },
+    "impossible_travel": {
+      "technique_id": "T1078",
+      "name": "Valid Accounts",
+      "tactics": [
+        "Defense Evasion",
+        "Persistence",
+        "Privilege Escalation",
+        "Initial Access"
+      ],
+      "description": "Using legitimate credentials to log in.",
+      "why": "Two distant logins too close in time usually means the credentials are in two different hands."
+    },
+    "ssh_remote_login": {
+      "technique_id": "T1021.004",
+      "name": "Remote Services: SSH",
+      "tactics": [
+        "Lateral Movement"
+      ],
+      "description": "Logging in to systems over SSH.",
+      "why": "Interactive SSH sessions from unexpected sources."
+    },
+    "phishing_email": {
+      "technique_id": "T1566",
+      "name": "Phishing",
+      "tactics": [
+        "Initial Access"
+      ],
+      "description": "Sending deceptive messages to gain access.",
+      "why": "Failed authentication, spoofed sender and urgency in an email."
+    },
+    "phishing_link": {
+      "technique_id": "T1566.002",
+      "name": "Phishing: Spearphishing Link",
+      "tactics": [
+        "Initial Access"
+      ],
+      "description": "Emails that lead the victim to a malicious link.",
+      "why": "Link text that does not match the real destination."
+    },
+    "phishing_attachment": {
+      "technique_id": "T1566.001",
+      "name": "Phishing: Spearphishing Attachment",
+      "tactics": [
+        "Initial Access"
+      ],
+      "description": "Emails carrying a malicious attachment.",
+      "why": "Executable, macro-enabled or double-extension attachments."
+    },
+    "malicious_file_execution": {
+      "technique_id": "T1204.002",
+      "name": "User Execution: Malicious File",
+      "tactics": [
+        "Execution"
+      ],
+      "description": "Tricking a user into opening a malicious file.",
+      "why": "The attacker relies on the victim running an attachment or download."
+    },
+    "lookalike_domain": {
+      "technique_id": "T1583.001",
+      "name": "Acquire Infrastructure: Domains",
+      "tactics": [
+        "Resource Development"
+      ],
+      "description": "Registering domains to support an attack.",
+      "why": "Look-alike domains such as paypa1.com are registered for phishing."
+    },
+    "email_impersonation": {
+      "technique_id": "T1656",
+      "name": "Impersonation",
+      "tactics": [
+        "Defense Evasion"
+      ],
+      "description": "Pretending to be a trusted person or brand.",
+      "why": "Display-name spoofing and Reply-To mismatches (for example CEO fraud)."
+    },
+    "port_scan": {
+      "technique_id": "T1046",
+      "name": "Network Service Discovery",
+      "tactics": [
+        "Discovery"
+      ],
+      "description": "Probing hosts to find listening services.",
+      "why": "One source touching many ports and getting denied."
+    },
+    "web_exploit": {
+      "technique_id": "T1190",
+      "name": "Exploit Public-Facing Application",
+      "tactics": [
+        "Initial Access"
+      ],
+      "description": "Exploiting a flaw in an internet-facing application.",
+      "why": "Unusual requests to a web application that lead to code execution."
+    },
+    "webshell": {
+      "technique_id": "T1505.003",
+      "name": "Server Software Component: Web Shell",
+      "tactics": [
+        "Persistence"
+      ],
+      "description": "A script on a web server that gives remote command execution.",
+      "why": "Requests such as /uploads/shell.php?cmd=..."
+    },
+    "command_execution": {
+      "technique_id": "T1059",
+      "name": "Command and Scripting Interpreter",
+      "tactics": [
+        "Execution"
+      ],
+      "description": "Running commands or scripts on a system.",
+      "why": "Shell commands launched by a newly compromised account."
+    },
+    "tool_download": {
+      "technique_id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "tactics": [
+        "Command and Control"
+      ],
+      "description": "Bringing attacker tools onto a compromised host.",
+      "why": "curl or wget downloading a script from an unknown server."
+    },
+    "c2_beaconing": {
+      "technique_id": "T1071",
+      "name": "Application Layer Protocol",
+      "tactics": [
+        "Command and Control"
+      ],
+      "description": "Using normal protocols to talk to attacker infrastructure.",
+      "why": "Regular, repeated outbound connections to the same external IP and port."
+    },
+    "data_exfiltration": {
+      "technique_id": "T1041",
+      "name": "Exfiltration Over C2 Channel",
+      "tactics": [
+        "Exfiltration"
+      ],
+      "description": "Stealing data over the existing command-and-control channel.",
+      "why": "Large outbound transfers to a known-bad destination."
+    },
+    "account_creation": {
+      "technique_id": "T1136",
+      "name": "Create Account",
+      "tactics": [
+        "Persistence"
+      ],
+      "description": "Creating a new account to keep access.",
+      "why": "useradd or similar run by a compromised account."
+    },
+    "sudo_abuse": {
+      "technique_id": "T1548.003",
+      "name": "Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+      "tactics": [
+        "Privilege Escalation",
+        "Defense Evasion"
+      ],
+      "description": "Abusing sudo to run commands as root.",
+      "why": "A freshly compromised user running privileged commands."
+    },
+    "log_clearing": {
+      "technique_id": "T1070",
+      "name": "Indicator Removal",
+      "tactics": [
+        "Defense Evasion"
+      ],
+      "description": "Deleting or altering evidence.",
+      "why": "Logs truncated or deleted after suspicious activity."
+    },
+    "scheduled_task": {
+      "technique_id": "T1053",
+      "name": "Scheduled Task/Job",
+      "tactics": [
+        "Execution",
+        "Persistence",
+        "Privilege Escalation"
+      ],
+      "description": "Using cron or scheduled tasks to run code.",
+      "why": "New cron entries created outside change windows."
+    }
+  },
+  "aliases": {
+    "ssh_brute_force": "brute_force",
+    "ip_bruteforce": "brute_force",
+    "user_targeted": "credential_stuffing",
+    "bruteforce": "brute_force",
+    "password_spraying": "password_spray",
+    "phish": "phishing_email",
+    "malware_download": "tool_download",
+    "web_shell": "webshell",
+    "c2": "c2_beaconing",
+    "beaconing": "c2_beaconing",
+    "new_account": "account_creation",
+    "off_hours_login": "valid_account_login"
+  }
+}

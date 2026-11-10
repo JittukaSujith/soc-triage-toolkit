@@ -1,0 +1,33 @@
+# Virtual environment and Python caches - never commit these
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Generated output
+demo_output/
+*.egg-info/
+build/
+dist/
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Keep REAL logs, emails and customer data out of this public repo
+private_data/
+real_logs/
+*.private.*
+
+# Files created when you try the README examples
+findings.csv
+events.jsonl
+ranked.csv
+timeline.md
+analysis.json
+report.md
+report.html

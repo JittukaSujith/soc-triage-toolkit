@@ -1,0 +1,4 @@
+# Keep sample data byte-identical on every OS so tests behave the same on Linux, macOS and Windows.
+* text=auto
+sample_data/** text eol=lf
+*.eml text eol=lf

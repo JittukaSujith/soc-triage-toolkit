@@ -1,0 +1,38 @@
+X-Sample-Data: FAKE - synthetic training email, not a real message
+Received: from relay.bulk-sender.example (relay.bulk-sender.example
+ [203.0.113.77]) by mx.victim-corp.example with ESMTP; Wed, 28 Oct 2026
+ 03:40:54 +0000
+Received: from mail.paypa1-secure.example (mail.paypa1-secure.example
+ [198.51.100.77]) by relay.bulk-sender.example with SMTP; Wed, 28 Oct 2026
+ 03:40:30 +0000
+Return-Path: <bounce@bulk-sender.example>
+Authentication-Results: mx.victim-corp.example; spf=fail
+ smtp.mailfrom=bulk-sender.example; dkim=none; dmarc=fail
+ header.from=paypa1-secure.example
+From: "PayPal Security" <service@paypa1-secure.example>
+Reply-To: helpdesk-paypal@mail-collector.example
+To: alice@victim-corp.example
+Subject: URGENT: Your account has been suspended - verify within 24 hours
+Date: Wed, 28 Oct 2026 03:40:55 +0000
+Message-ID: <80953@sample.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8929518076296927795=="
+
+--===============8929518076296927795==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Your account is suspended. Verify now: http://login.paypa1-secure.example/ver=
+ify
+
+--===============8929518076296927795==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Your account is suspended.</p><p><a href=3D"http://198.51.100.=
+77/verify">https://www.paypal.com/verify</a></p><p>Or sign in: <a href=3D"htt=
+p://login.paypa1-secure.example/verify">PayPal Login</a></p></body></html>
+
+--===============8929518076296927795==--

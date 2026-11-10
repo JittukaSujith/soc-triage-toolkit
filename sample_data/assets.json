@@ -1,0 +1,13 @@
+{
+  "_notice": "FAKE SAMPLE DATA - synthetic training data, not real logs. All names, hosts and IPs are invented.",
+  "assets": {
+    "web01": 4,
+    "db01": 5,
+    "dc01": 5,
+    "mail01": 4,
+    "vpn01": 4,
+    "laptop-alice": 2,
+    "laptop-bob": 2,
+    "printer01": 1
+  }
+}

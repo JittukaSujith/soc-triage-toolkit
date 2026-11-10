@@ -1,0 +1,180 @@
+{
+  "_notice": "FAKE SAMPLE DATA - synthetic training data, not real logs. All names, hosts and IPs are invented.",
+  "alerts": [
+    {
+      "id": "A-001",
+      "title": "SSH brute force then successful login",
+      "source": "ids",
+      "severity": "high",
+      "category": "brute_force",
+      "asset": "web01",
+      "user": "deploy",
+      "src_ip": "203.0.113.45",
+      "description": "22 failed SSH logins followed by a success",
+      "tags": [
+        "successful_login_after_failures",
+        "internet_facing"
+      ],
+      "timestamp": "2026-10-28T02:17:12Z"
+    },
+    {
+      "id": "A-002",
+      "title": "Outbound connection to rare port 4444",
+      "source": "firewall",
+      "severity": "medium",
+      "category": "c2_beaconing",
+      "asset": "web01",
+      "user": "",
+      "src_ip": "10.0.0.5",
+      "description": "Repeated outbound connections every ~5 minutes",
+      "tags": [
+        "known_bad_ip"
+      ],
+      "timestamp": "2026-10-28T02:21:03Z"
+    },
+    {
+      "id": "A-003",
+      "title": "Web shell access pattern",
+      "source": "waf",
+      "severity": "high",
+      "category": "webshell",
+      "asset": "web01",
+      "user": "",
+      "src_ip": "203.0.113.45",
+      "description": "Request to /uploads/shell.php with cmd parameter",
+      "tags": [
+        "known_bad_ip",
+        "internet_facing"
+      ],
+      "timestamp": "2026-10-28T02:26:02Z"
+    },
+    {
+      "id": "A-004",
+      "title": "Password spray detected",
+      "source": "ids",
+      "severity": "medium",
+      "category": "password_spray",
+      "asset": "web01",
+      "user": "",
+      "src_ip": "192.0.2.60",
+      "description": "10 usernames tried from one IP",
+      "tags": [],
+      "timestamp": "2026-10-28T01:34:00Z"
+    },
+    {
+      "id": "A-005",
+      "title": "Port scan from external host",
+      "source": "firewall",
+      "severity": "low",
+      "category": "port_scan",
+      "asset": "web01",
+      "user": "",
+      "src_ip": "192.0.2.77",
+      "description": "16 denied connections across 16 ports",
+      "tags": [],
+      "timestamp": "2026-10-28T00:55:16Z"
+    },
+    {
+      "id": "A-006",
+      "title": "Impossible travel for alice",
+      "source": "idp",
+      "severity": "high",
+      "category": "impossible_travel",
+      "asset": "laptop-alice",
+      "user": "alice",
+      "src_ip": "203.0.113.150",
+      "description": "New York to Moscow in 20 minutes",
+      "tags": [
+        "impossible_travel"
+      ],
+      "timestamp": "2026-10-28T13:25:00Z"
+    },
+    {
+      "id": "A-007",
+      "title": "Off-hours login for bob",
+      "source": "idp",
+      "severity": "low",
+      "category": "off_hours_login",
+      "asset": "laptop-bob",
+      "user": "bob",
+      "src_ip": "192.0.2.91",
+      "description": "Login at 03:12 UTC",
+      "tags": [
+        "after_hours"
+      ],
+      "timestamp": "2026-10-28T03:12:00Z"
+    },
+    {
+      "id": "A-008",
+      "title": "New admin-like account created",
+      "source": "auditd",
+      "severity": "high",
+      "category": "account_creation",
+      "asset": "web01",
+      "user": "deploy",
+      "src_ip": "",
+      "description": "useradd support2 executed via sudo",
+      "tags": [
+        "privileged_account"
+      ],
+      "timestamp": "2026-10-28T02:22:15Z"
+    },
+    {
+      "id": "A-009",
+      "title": "WordPress login brute force",
+      "source": "waf",
+      "severity": "medium",
+      "category": "brute_force",
+      "asset": "web01",
+      "user": "",
+      "src_ip": "198.51.100.200",
+      "description": "12 failed wp-login attempts then success",
+      "tags": [
+        "successful_login_after_failures",
+        "internet_facing"
+      ],
+      "timestamp": "2026-10-28T03:10:40Z"
+    },
+    {
+      "id": "A-010",
+      "title": "Printer firmware check-in",
+      "source": "network",
+      "severity": "info",
+      "category": "informational",
+      "asset": "printer01",
+      "user": "",
+      "src_ip": "10.0.0.88",
+      "description": "Routine vendor check-in",
+      "tags": [],
+      "timestamp": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "A-011",
+      "title": "Phishing email reported by user",
+      "source": "email",
+      "severity": "medium",
+      "category": "phishing_email",
+      "asset": "mail01",
+      "user": "alice",
+      "src_ip": "198.51.100.77",
+      "description": "User reported suspicious PayPal email",
+      "tags": [
+        "known_bad_ip"
+      ],
+      "timestamp": "2026-10-28T03:55:00Z"
+    },
+    {
+      "id": "A-012",
+      "title": "Failed logins for jsmith",
+      "source": "auth",
+      "severity": "low",
+      "category": "failed_login",
+      "asset": "web01",
+      "user": "jsmith",
+      "src_ip": "10.0.0.25",
+      "description": "2 failures then success",
+      "tags": [],
+      "timestamp": "2026-10-28T09:30:31Z"
+    }
+  ]
+}

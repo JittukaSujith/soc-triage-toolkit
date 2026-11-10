@@ -1,0 +1,20 @@
+X-Sample-Data: FAKE - synthetic training email, not a real message
+Received: from vps-4471.bulk-sender.example (vps-4471.bulk-sender.example
+ [203.0.113.150]) by mx.victim-corp.example with ESMTP; Wed, 28 Oct 2026
+ 03:40:50 +0000
+Return-Path: <dana.whitfield@acme-corp.example>
+Authentication-Results: mx.victim-corp.example; spf=softfail
+ smtp.mailfrom=acme-corp.example; dkim=none; dmarc=fail
+ header.from=acme-corp.example
+From: "Dana Whitfield" <dana.whitfield@acme-corp.example>
+Reply-To: "Dana Whitfield" <dana.whitfield.ceo@mail-collector.example>
+To: finance@victim-corp.example
+Subject: Quick favor - urgent wire needed today
+Date: Wed, 28 Oct 2026 03:40:55 +0000
+Message-ID: <99620@sample.example>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+I'm in a meeting and need a wire sent today. Reply to this email only. Keep t=
+his confidential.

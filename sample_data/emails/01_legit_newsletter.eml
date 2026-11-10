@@ -1,0 +1,32 @@
+X-Sample-Data: FAKE - synthetic training email, not a real message
+Received: from mail.example-news.example (mail.example-news.example
+ [192.0.2.25]) by mx.victim-corp.example with ESMTPS; Wed, 28 Oct 2026
+ 03:40:50 +0000
+Return-Path: <news@example-news.example>
+Authentication-Results: mx.victim-corp.example; spf=pass
+ smtp.mailfrom=example-news.example; dkim=pass header.d=example-news.example;
+ dmarc=pass header.from=example-news.example
+From: Example News <news@example-news.example>
+To: alice@victim-corp.example
+Subject: Your weekly digest
+Date: Wed, 28 Oct 2026 03:40:55 +0000
+Message-ID: <96712@sample.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7533716816352499006=="
+
+--===============7533716816352499006==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This week's top stories: https://www.example-news.example/post/42
+
+--===============7533716816352499006==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>This week's top stories: <a href=3D"https://www.example-news.e=
+xample/post/42">Read the digest</a></p></body></html>
+
+--===============7533716816352499006==--

