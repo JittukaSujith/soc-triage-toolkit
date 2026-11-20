@@ -35,7 +35,7 @@ Playbooks for the four most common cases are in [`playbooks/`](playbooks/): [phi
 
 ## Quick start
 
-You need Python 3.9 or newer and Git. The commands below are for macOS or Linux; on Windows, activate the environment with `.venv\Scripts\activate`.
+You need Python 3.10 or newer and Git. The commands below are for macOS or Linux; on Windows, activate the environment with `.venv\Scripts\activate`.
 
 ```bash
 git clone https://github.com/JittukaSujith/soc-triage-toolkit.git
