@@ -34,7 +34,7 @@ A hands-on Python toolkit that shows how a junior SOC (Security Operations Cente
 ## Sample output
 | Alert triage dashboard | Generated incident report |
 | --- | --- |
-| ![Dashboard](docs/dashboard.png) | ![Report](docs/report.png) |
+| ![Dashboard](dashboard.png) | ![Report](report.png) |
 
 Playbooks for the four most common cases are in [`playbooks/`](playbooks/): [phishing](playbooks/phishing.md), [brute force](playbooks/brute_force.md), [malware alert](playbooks/malware_alert.md) and [suspicious login](playbooks/suspicious_login.md).
 
