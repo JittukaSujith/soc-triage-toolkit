@@ -18,7 +18,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         # Note: if GitHub removes Python 3.9 from a runner image, change "3.9" to "3.10" here.
-        python-version: ["3.9", "3.12"]
+        python-version: ["3.10", "3.12"]
     steps:
       - name: Check out the code
         uses: actions/checkout@v6
