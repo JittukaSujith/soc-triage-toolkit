@@ -31,6 +31,11 @@ A hands-on Python toolkit that shows how a junior SOC (Security Operations Cente
 | 10 | [Triage report generator](tools/report_generator/README.md) | Writes the incident report in Markdown and HTML | CLI |
 | 11 | [Alert triage dashboard](tools/triage_dashboard/README.md) | Ranked alert list; mark True positive, False positive or Needs escalation | GUI |
 
+## Sample output
+| Alert triage dashboard | Generated incident report |
+| --- | --- |
+| ![Dashboard](docs/dashboard.png) | ![Report](docs/report.png) |
+
 Playbooks for the four most common cases are in [`playbooks/`](playbooks/): [phishing](playbooks/phishing.md), [brute force](playbooks/brute_force.md), [malware alert](playbooks/malware_alert.md) and [suspicious login](playbooks/suspicious_login.md).
 
 ## Quick start
