@@ -122,7 +122,7 @@ Design rules: core logic lives in pure, testable functions; the command-line or 
 
 ## Author
 
-Built by **Sujith Kumar** ([@JittukaSujith](https://github.com/JittukaSujith)) as a hands-on learning and portfolio project for SOC analyst roles.
+Built by **Sujith Kumar Jittuka** ([@JittukaSujith](https://github.com/JittukaSujith)) as a hands-on learning and portfolio project for SOC analyst roles.
 
 ## License
 
