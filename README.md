@@ -6,6 +6,15 @@ A hands-on Python toolkit that shows how a junior SOC (Security Operations Cente
 
 > **Ethical use and disclaimer.** This project is for learning and for defending systems you own or are authorised to monitor. It only analyses logs and emails that **you provide**; it does not scan, probe, attack or log in to any system. The sample data is entirely fake. **Never upload real company logs, emails, customer data or credentials to a public repository.** The scoring rules are teaching examples, not a replacement for a production security product or professional judgement.
 
+### What this project demonstrates
+- **Log analysis:** normalising auth, web and firewall logs into one event format
+- **Detection:** brute-force/password-spray, impossible travel, phishing email scoring
+- **Triage:** alert prioritisation with explanations and analyst decisions (TP / FP / escalate)
+- **Frameworks:** MITRE ATT&CK mapping and incident timeline reconstruction
+- **Reporting:** Markdown and HTML incident reports with evidence, IOCs and next steps
+- **Engineering quality:** offline unit tests, CI on Linux, macOS and Windows, no third-party dependencies
+
+  
 ## Tools at a glance
 
 | # | Tool | What it does | Interface |
